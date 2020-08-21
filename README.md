@@ -1,6 +1,8 @@
 
 # Spring Boot Application with two JMS servers
 
+Related <a href="https://dev.to/adzubla/using-multiple-jms-servers-with-spring-boot-3cbm">dev.to</a> article.
+
 This is an example using two JMS servers in the same Spring Boot Application.
 
 ### Start brokers
@@ -31,3 +33,9 @@ Open two producers, each one in its own terminal:
     ./producer2.sh
 
 Type anything and it will be sent to the queue.
+
+# Dynamic creation of listeners
+
+Execute the dynamice version os the consumer instead.
+
+    ./dynamic-consumer.sh
