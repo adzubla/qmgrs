@@ -29,7 +29,7 @@ public class JmsConfig implements JmsListenerConfigurer {
     private DefaultJmsListenerContainerFactoryConfigurer configurer;
 
     @Autowired
-    private MqProperties mqProperties;
+    private QmProperties qmProperties;
 
     @Autowired
     private QueueConsumer queueConsumer;
@@ -39,7 +39,7 @@ public class JmsConfig implements JmsListenerConfigurer {
 
     @Override
     public void configureJmsListeners(JmsListenerEndpointRegistrar registrar) {
-        for (MQConfigurationProperties properties : mqProperties.getServers()) {
+        for (MQConfigurationProperties properties : qmProperties.getList()) {
             String queueManager = properties.getQueueManager();
 
             MQConnectionFactory connectionFactory = new MQConnectionFactoryFactory(properties, factoryCustomizers.getIfAvailable()).createConnectionFactory(MQConnectionFactory.class);
