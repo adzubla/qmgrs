@@ -20,7 +20,7 @@ import java.util.List;
 public class Qm1Config {
 
     @Bean
-    @ConfigurationProperties("qm1.ibm.mq")
+    @ConfigurationProperties("qm1")
     public MQConfigurationProperties qm1ConfigProperties() {
         return new MQConfigurationProperties();
     }
