@@ -11,8 +11,9 @@
     <description>Use of two queue manager in Spring Boot application</description>
 
     <modules>
-        <module>consumer</module>
         <module>producer</module>
+        <module>consumer</module>
+        <module>dynamic-consumer</module>
     </modules>
 
 </project>
